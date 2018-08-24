@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <link rel="stylesheet" href="view.css">
+    <script src="myGame.js"></script>
+  </head>
+  
+  <body>
+    <h1>Tic Tac Toe!</h1>
+    
+    <div ng-app="gameApp" ng-controller="GameController">
+            <div><button class="btn-primary btn-lg" ng-repeat="cell in grid[0]" ng-disabled="checkForEndOfGame();" ng-click="move(cell);">{{ cell.value }}</button></div>
+            <div><button class="btn-primary btn-lg" ng-repeat="cell in grid[1]" ng-disabled="checkForEndOfGame();" ng-click="move(cell);">{{ cell.value }}</button></div>
+            <div><button class="btn-primary btn-lg" ng-repeat="cell in grid[2]" ng-disabled="checkForEndOfGame();" ng-click="move(cell);">{{ cell.value }}</button></div>
+            <br>
+            <br/>
+            <p>
+              <span ng-hide="winner || draw">Current Player: {{ currentPlayer }}</span>
+              <span ng-show="winner">Player {{ currentPlayer }} won!</span>
+              <span ng-show="draw">Draw</span>
+              <span ng-show="spaceTaken">This space is occupied choose empty space</span>
+            </p>
+            <button class="btn btn-primary btn-large" ng-click="Play();">New Game</button>
+    </div>
+  </body>
+</html>

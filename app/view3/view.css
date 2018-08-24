@@ -1,0 +1,36 @@
+*{
+    text-align: center;
+    font-family: "Calibri";
+  }
+  
+  body {
+    padding: 40px 60px;
+    font-family: "Verdana";
+  }
+  
+  h1 {
+    margin: 40px;
+  }
+  
+  .cell {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+  }
+
+  button{
+    color:rgba(35, 23, 207, 0.445);
+    font-weight:bolder;
+    text-transform:uppercase;
+    padding:40px;
+    margin:5px 0;
+    cursor:pointer;
+    background-color:rgba(5, 5, 5, 0)
+  }
+
+  .grid{
+    float:left;
+    color:#333;
+    font-weight:bold;
+  }
